@@ -4,15 +4,42 @@
 
     </head>
 
-<body>
+<body bgcolor="#FFFF00">
 <h1>JS ES 2</h1>
 <h2>Static HTML page: exercise 1 but with jQuery</h2>
 
 
-<div>NON PREMERE IL BOTTONW</div>
-<button>CLICCAMI</button>
+<div id="div1" > </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $("body").append("<button id='btn1'>CLICCAMI</button>").click(function(){  //aggiungi bottone al body e attacchi click
+
+if(rosso){
+        $("#div1").attr("style", "background-color: rgb(160,30,70)");  //quando clicco cambio colore sfondo
+        $("#div1").html("default"); //quando clicco cambia il testo
+        rosso=false;
+    } else {
+
+        $("#div1").attr("style", "background-color: default");  //quando clicco cambio colore sfondo
+        $("#div1").html("colore"); //quando clicco cambia il testo
+        rosso=true;
+
+    }
+    
+    
+    });;
+  //  document.getElementById("div1").innerHTML = "Ciao";
+    $("#div1").html("Non premere bottone");
+    var rosso = true;
+
+  
+
+    var h3 = $("<h3>Aggiunto un titolo H3 </h3>")
+    $("body").append(h3);
+    
+</script>
 
 </body>
 
