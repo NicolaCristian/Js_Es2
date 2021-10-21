@@ -14,7 +14,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-    $("body").append("<button id='btn1'>CLICCAMI</button>").click(function(){  //aggiungi bottone al body e attacchi click
+    $("body").append($("<button id='btn1'>CLICCAMI</button>").click(function(){  //aggiungi bottone al body e attacchi click
 
 if(rosso){
         $("#div1").attr("style", "background-color: rgb(160,30,70)");  //quando clicco cambio colore sfondo
@@ -29,7 +29,7 @@ if(rosso){
     }
     
     
-    });;
+    }));;
   //  document.getElementById("div1").innerHTML = "Ciao";
     $("#div1").html("Non premere bottone");
     var rosso = true;
